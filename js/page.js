@@ -29,9 +29,14 @@ function findOver1000() {
   alert(firstThousand);
 }
 
+function ResetNum() {
+  monthlySales.fill(0);
+  monthlySalesChart.update();
+}
+
 // Bar
 
-var monthlySalesCart = new Chart(ctx, {
+var monthlySalesChart = new Chart(ctx, {
   type: 'bar',
   data: {
     labels: monthlyLabel,
@@ -58,7 +63,7 @@ var monthlySalesCart = new Chart(ctx, {
 });
 
 // pie 
- var depSalesCart = new Chart(pieCtx, {
+ var depSalesChart = new Chart(pieCtx, {
    type: 'pie',
    data: {
      labels: deptSales,
